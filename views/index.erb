@@ -1,0 +1,12 @@
+<h1>Here are my restaurants:</h1>
+
+<% @restaurants.each_with_index do |restaurant, index| %>
+	<a href="/restaurants/<%= restaurant.id %>">
+		<%= index + 1 %>. <%= restaurant.name %>
+	</a>
+	<br>
+<% end %>
+
+<a href="/restaurants/new">
+	Add a new restaurant
+</a>
